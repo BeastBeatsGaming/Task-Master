@@ -1,0 +1,51 @@
+.form-page-container {
+  background-color: #fff; /* Or var(--container-background) if page-container handles it */
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  /* box-shadow: var(--box-shadow); Redundant if page-container has it */
+}
+
+.form-page-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+}
+
+.styled-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.styled-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.styled-form .form-control {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.styled-form .form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.styled-form textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.styled-form button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  /* .btn and .btn-primary styles will apply from index.css */
+}
+/* .error-message styles are global */

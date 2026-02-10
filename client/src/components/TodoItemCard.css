@@ -1,0 +1,94 @@
+.todo-card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--primary-color); /* Default border */
+  transition: box-shadow 0.2s ease-in-out;
+}
+.todo-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.todo-card.in-progress {
+  border-left-color: var(--primary-color);
+}
+.todo-card.completed {
+  border-left-color: var(--secondary-color);
+}
+.todo-card.cancelled {
+  border-left-color: #7f8c8d;
+} /* Grey for cancelled */
+/* Add a specific style for overdue tasks if needed or use .overdue-tag */
+.todo-card.overdue-border {
+  border-left-color: var(--danger-color);
+} /* If you want to change border for overdue */
+
+.todo-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.todo-card-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--dark-color);
+  word-break: break-word;
+}
+
+.delete-todo-btn {
+  background: none;
+  border: none;
+  color: var(--danger-color);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  opacity: 0.7;
+}
+.delete-todo-btn:hover {
+  opacity: 1;
+}
+
+.todo-card-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  white-space: pre-wrap; /* Preserve line breaks if any */
+  word-break: break-word;
+}
+
+.todo-card-details {
+  font-size: 0.85rem;
+  color: #555;
+}
+.todo-card-details p {
+  margin-bottom: 0.4rem;
+}
+.todo-card-details .form-group {
+  margin-top: 0.75rem;
+  margin-bottom: 0; /* No extra margin at bottom of card */
+}
+.todo-card-details .form-group label {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.status-select {
+  padding: 0.4rem 0.6rem !important; /* Override global form-control padding */
+  font-size: 0.9rem !important;
+}
+
+.overdue-tag {
+  background-color: var(--danger-color);
+  color: white;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  vertical-align: middle;
+}

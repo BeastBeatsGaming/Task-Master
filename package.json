@@ -1,0 +1,23 @@
+{
+  "name": "cadd-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && npm run install:client && npm run install:server",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start:server": "cd server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

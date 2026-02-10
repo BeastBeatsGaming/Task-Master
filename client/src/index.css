@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --text-color: #333;
+  --background-color: #fff;
+  --container-background: #fff; /* For page content areas */
+  --border-radius: 6px;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --navbar-height: 60px; /* Define navbar height */
+  --font-family: "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  background-color: var(--light-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* General container for page content, excluding landing page */
+.page-container {
+  max-width: 900px;
+  margin: calc(var(--navbar-height) + 2rem) auto 2rem auto; /* Account for navbar */
+  padding: 2rem;
+  background-color: var(--container-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+  margin-bottom: 0.75rem;
+}
+
+/* Buttons (general - can be overridden) */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #ecf0f1;
+  color: var(--dark-color);
+  border: 1px solid #bdc3c7;
+}
+.btn-secondary:hover {
+  background-color: #dde1e2;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #555;
+}
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+  border-radius: var(--border-radius);
+}

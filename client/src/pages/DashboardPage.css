@@ -1,0 +1,92 @@
+.dashboard-container {
+  /* Styles for the overall dashboard page within page-container */
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.no-todos-message {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-top: 2rem;
+}
+.no-todos-message a {
+  font-weight: 500;
+}
+
+/* NEW: Container for the columns, uses Flexbox */
+.dashboard-columns-container {
+  display: flex; /* Use flexbox for side-by-side columns */
+  gap: 1.5rem; /* Space between columns */
+  align-items: flex-start; /* Align columns at the top */
+  /* Allow horizontal scrolling on smaller screens if columns don't fit */
+  overflow-x: auto;
+  padding-bottom: 1rem; /* Space for scrollbar if it appears */
+}
+
+.dashboard-column {
+  background-color: #f0f2f5; /* Slightly different background for columns */
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
+  min-width: 300px; /* Minimum width for each column */
+  flex: 1; /* Allow columns to grow, but base them on min-width */
+  /* To ensure vertical stacking and not wrapping within the column: */
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-column h3 {
+  font-size: 1.2rem; /* Slightly smaller column titles */
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid; /* Make border more prominent */
+  text-align: center; /* Center column titles */
+  font-weight: 600;
+}
+
+/* Assign specific border colors using classes for columns or direct styling */
+.overdue-column h3 {
+  border-bottom-color: var(--danger-color);
+}
+.in-progress-column h3 {
+  border-bottom-color: var(--primary-color);
+}
+.completed-column h3 {
+  border-bottom-color: var(--secondary-color);
+}
+
+.column-content {
+  /* This div will contain the TodoItemCards */
+  /* If you want columns to be scrollable independently: */
+  /* max-height: calc(100vh - 250px); Adjust this value based on your layout */
+  /* overflow-y: auto; */
+  display: flex;
+  flex-direction: column; /* Ensure items stack vertically */
+  gap: 0.75rem; /* Space between cards in a column */
+}
+
+.empty-column-message {
+  color: #888;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #fff; /* Give it a slight background if column is empty */
+  border-radius: var(--border-radius);
+}
+
+/* TodoItemCard specific adjustments if needed for this layout */
+/* .todo-card {
+  margin-bottom: 0.75rem; Now handled by gap in .column-content
+} */
